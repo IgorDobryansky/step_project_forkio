@@ -1,7 +1,7 @@
 {
-  "name": "ololo",
+  "name": "step_project_forkio",
   "version": "1.0.0",
-  "description": "some kek",
+  "description": "Второй степ-проект в Dan-It. Парный",
   "main": "index.html",
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "zip": "gulp deployZip --build",
     "clean": "gulp cleanBuild"
   },
-  "author": "kek",
+  "author": "Елена Полянская, Игорь Добрянский",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.27.10",
