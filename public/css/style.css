@@ -120,14 +120,34 @@ h6 {
   font-style: normal;
 }
 .header {
+  position: relative;
   width: 100%;
   max-width: 1200px;
-  padding: 0 90px;
+  padding-right: 283px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-image: url(../img/header/fork_app.png);
+}
+.header .logo-wrapper {
+  position: absolute;
+  top: 29.5px;
+  left: 90px;
+}
+.header .buy-button {
+  position: absolute;
+  width: 145px;
+  padding: 10px 20px;
+  top: 31px;
+  right: 90px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 17px;
+  border-radius: 39px;
 }
 .header__nav {
   width: 100%;

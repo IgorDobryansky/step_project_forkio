@@ -1,15 +1,33 @@
 .header {
+    position: relative;
     width: 100%;
     max-width: 1200px;
-    padding: 0 90px;
+    padding-right: 283px;
     margin: 0 auto;
     @include flex(flex-start, center, column);
+    background-image: url(../img/header/fork_app.png);
+    .logo-wrapper {
+        position: absolute;
+        top: 29.5px;
+        left: 90px;
+    }
+    .buy-button {
+        position: absolute;
+        width: 145px;
+        padding: 10px 20px;
+        top: 31px;
+        right: 90px;
+        @include font-family-montserrat-700;
+        font-size: $font-size-4xs;
+        line-height: $line-height-6xs;
+        border-radius: 39px;
+    }
     &__nav {
+        width: 100%;
+        @include flex(space-between, center);
         .logo-wrapper{
             align-self: flex-end;
         }
-        width: 100%;
-        @include flex(space-between, center);
         .nav__menu {
             width: 527px;
             @include flex(space-between, center)
