@@ -1,18 +1,237 @@
 .header {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 588px;
+  @include flex(flex-start, center, column);
+  background: url(../img/header/fork_app.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  .menu {
+    display: none;
+  }
+  .logo-wrapper {
+    position: absolute;
+    top: 29.5px;
+    left: 90px;
+    @include flex(flex-start, flex-end);
+    color: $color-nav-hover;
+    .logo-title {
+      margin: 0 0 8px 17px;
+      @include font-family-lato-700;
+      font-size: $font-size-xs;
+      line-height: $line-height-7xs;
+      text-transform: uppercase;
+    }
+    &:hover {
+      color: $color-basic;
+    }
+  }
+  .buy-button {
+    position: absolute;
+    width: 145px;
+    padding: 10px 20px;
+    top: 31px;
+    right: 90px;
+    @include font-family-montserrat-700;
+    font-size: $font-size-4xs;
+    line-height: $line-height-6xs;
+    border-radius: 39px;
+    color: $color-basic;
+    background-color: $color-nav-hover;
+    &:hover {
+      background-color: $color-basic;
+      color: $color-nav-hover;
+    }
+  }
+  &__nav {
     width: 100%;
-    max-width: 1200px;
-    padding: 0 90px;
-    margin: 0 auto;
-    @include flex(flex-start, center, column);
-    &__nav {
-        .logo-wrapper{
-            align-self: flex-end;
+    padding: 40px 283px;
+    @include font-family-montserrat-700;
+    @include flex(flex-end, center);
+    color: $color-nav-hover;
+    .nav__list {
+      width: 527px;
+      padding: 3px 10px 3px 0;
+      @include flex(space-between, center);
+      &-link {
+        font-size: $font-size-4xs;
+        line-height: $line-height-8xs;
+        &:hover {
+          color: $color-basic;
         }
+      }
+    }
+  }
+  &-title {
+    margin-top: 83px;
+    @include font-family-montserrat-700;
+    color: $color-basic;
+    font-size: $font-size-7xl;
+    line-height: $line-height-10xl;
+    text-align: center;
+  }
+  &-text {
+    margin-top: 19px;
+    @include font-family-lato-400;
+    color: $color-nav-hover;
+    font-size: $font-size-l;
+    line-height: $line-height-l-xl;
+    text-align: center;
+  }
+  &-subtitle {
+    margin-top: 19px;
+    @include font-family-montserrat-400;
+    font-size: $font-size-4xs;
+    line-height: $line-height-7xs;
+    color: $color-comment;
+    text-align: center;
+  }
+  .download {
+    position: absolute;
+    left: 50%;
+    top: 800px;
+    transform: translate(-50%, -32px);
+    @include flex(flex-start, center, column);
+    &-button {
+      width: 390px;
+      padding: 20px 0;
+      @include font-family-montserrat-700;
+      font-size: $font-size-2xs;
+      line-height: $line-height-2xs;
+      color: $color-basic;
+      background-color: $color-nav-hover;
+      border-radius: 62px;
+      &:hover {
+        background-color: $color-basic;
+        color: $color-nav-hover;
+      }
+    }
+    &__info {
+      margin-top: 19px;
+      @include font-family-montserrat-400;
+      font-size: $font-size-6xs;
+      line-height: $line-height-8xs;
+      color: $color-comment;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .header {
+    padding-bottom: 540px;
+    .logo-wrapper {
+      top: 22px;
+      left: 20px;
+    }
+    .buy-button {
+      top: 24px;
+      right: 20px;
+    }
+    &__nav {
+      padding: 83px 125.5px 14px;
+      background-color: $color-nav-993;
+      .nav__list {
         width: 100%;
         @include flex(space-between, center);
-        .nav__menu {
-            width: 527px;
-            @include flex(space-between, center)
+        &-link {
+          line-height: $line-height-5xs;
         }
+      }
     }
+    &-title {
+      margin-top: 69px;
+      font-size: $font-size-7xl;
+      line-height: $line-height-9xl;
+    }
+    &-text {
+      font-size: $font-size-xs;
+      line-height: $line-height-s;
+    }
+    &-subtitle {
+      font-size: $font-size-6xs;
+      line-height: $line-height-9xs;
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .header {
+    .menu {
+      position: absolute;
+      display: block;
+      right: 15px;
+      top: 41px;
+      .line-wrapper {
+        position: relative;
+        width: 26px;
+        height: 21px;
+        .line {
+          position: absolute;
+          right: 0;
+          width: 26px;
+          border: 1.5px solid $color-basic;
+          border-radius: 3px;
+          background-color: $color-basic;
+        }
+        .first {
+          width: 15px;
+          top: 0;
+        }
+        .second {
+          top: 9px;
+        }
+        .third {
+          top: 18px;
+        }
+      }
+    }
+    .logo-wrapper {
+      top: 31px;
+      left: 16px;
+      .logo-title {
+        display: none;
+      }
+    }
+    .buy-button {
+      top: 33px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__nav {
+      .nav__list {
+        width: 100%;
+        @include flex(space-between, center);
+        &-link {
+          line-height: $line-height-5xs;
+        }
+      }
+    }
+    &-title {
+      margin-top: 49px;
+      font-size: $font-size-3xl;
+      line-height: $line-height-5xl;
+    }
+    &-text {
+      font-size: $font-size-3xs;
+      line-height: $line-height-s;
+    }
+    &-subtitle {
+      margin-top: 14px;
+      font-size: $font-size-6xs;
+      line-height: $line-height-9xs;
+    }
+    .download {
+      &-button {
+        width: 290px;
+        padding: 11.5px 0;
+        font-size: $font-size-3xs;
+        line-height: $line-height-4xs;
+      }
+      &__info {
+        line-height: $line-height-9xs;
+      }
+    }
+  }
 }

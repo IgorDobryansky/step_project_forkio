@@ -35,7 +35,6 @@ body {
   width: 100%;
   font-size: 100%;
   line-height: 1;
-  font-size: 14px;
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -120,32 +119,156 @@ h6 {
   font-style: normal;
 }
 .header {
+  position: relative;
   width: 100%;
   max-width: 1200px;
-  padding: 0 90px;
   margin: 0 auto;
+  padding-bottom: 588px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background: url(../img/header/fork_app.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+.header .menu {
+  display: none;
+}
+.header .logo-wrapper {
+  position: absolute;
+  top: 29.5px;
+  left: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  color: #8d81ac;
+}
+.header .logo-wrapper .logo-title {
+  margin: 0 0 8px 17px;
+  font-family: Lato;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.header .logo-wrapper:hover {
+  color: #ffffff;
+}
+.header .buy-button {
+  position: absolute;
+  width: 145px;
+  padding: 10px 20px;
+  top: 31px;
+  right: 90px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 17px;
+  border-radius: 39px;
+  color: #ffffff;
+  background-color: #8d81ac;
+}
+.header .buy-button:hover {
+  background-color: #ffffff;
+  color: #8d81ac;
+}
+.header__nav {
+  width: 100%;
+  padding: 40px 283px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: #8d81ac;
+}
+.header__nav .nav__list {
+  width: 527px;
+  padding: 3px 10px 3px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav .nav__list-link {
+  font-size: 16px;
+  line-height: 15px;
+}
+.header__nav .nav__list-link:hover {
+  color: #ffffff;
+}
+.header-title {
+  margin-top: 83px;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 82px;
+  line-height: 82px;
+  text-align: center;
+}
+.header-text {
+  margin-top: 19px;
+  font-family: Lato;
+  font-weight: 400;
+  font-style: normal;
+  color: #8d81ac;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.header-subtitle {
+  margin-top: 19px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 16px;
+  color: #848e97;
+  text-align: center;
+}
+.header .download {
+  position: absolute;
+  left: 50%;
+  top: 800px;
+  transform: translate(-50%, -32px);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
 }
-.header__nav {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.header .download-button {
+  width: 390px;
+  padding: 20px 0;
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 22px;
+  color: #ffffff;
+  background-color: #8d81ac;
+  border-radius: 62px;
 }
-.header__nav .logo-wrapper {
-  align-self: flex-end;
+.header .download-button:hover {
+  background-color: #ffffff;
+  color: #8d81ac;
 }
-.header__nav .nav__menu {
-  width: 527px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.header .download__info {
+  margin-top: 19px;
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 15px;
+  color: #848e97;
 }
+
 
 .section__editor-title {
   font-family: Montserrat;
@@ -176,6 +299,124 @@ h6 {
   line-height: 20px;
   background-color: #21262d;
   border-color: rgba(240, 246, 252, 0.1);
+}
+
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .header {
+    padding-bottom: 540px;
+  }
+  .header .logo-wrapper {
+    top: 22px;
+    left: 20px;
+  }
+  .header .buy-button {
+    top: 24px;
+    right: 20px;
+  }
+  .header__nav {
+    padding: 83px 125.5px 14px;
+    background-color: #27262a;
+  }
+  .header__nav .nav__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav .nav__list-link {
+    line-height: 18px;
+  }
+  .header-title {
+    margin-top: 69px;
+    font-size: 82px;
+    line-height: 72px;
+  }
+  .header-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .header-subtitle {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .menu {
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: 41px;
+  }
+  .header .menu .line-wrapper {
+    position: relative;
+    width: 26px;
+    height: 21px;
+  }
+  .header .menu .line-wrapper .line {
+    position: absolute;
+    right: 0;
+    width: 26px;
+    border: 1.5px solid #ffffff;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+  .header .menu .line-wrapper .first {
+    width: 15px;
+    top: 0;
+  }
+  .header .menu .line-wrapper .second {
+    top: 9px;
+  }
+  .header .menu .line-wrapper .third {
+    top: 18px;
+  }
+  .header .logo-wrapper {
+    top: 31px;
+    left: 16px;
+  }
+  .header .logo-wrapper .logo-title {
+    display: none;
+  }
+  .header .buy-button {
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header__nav .nav__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav .nav__list-link {
+    line-height: 18px;
+  }
+  .header-title {
+    margin-top: 49px;
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .header-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .header-subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .header .download-button {
+    width: 290px;
+    padding: 11.5px 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .header .download__info {
+    line-height: 14px;
+  }
 }
 
 .container {
