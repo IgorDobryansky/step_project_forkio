@@ -133,6 +133,9 @@ h6 {
   background-repeat: no-repeat;
   background-position: 50% 0;
 }
+.header .menu {
+  display: none;
+}
 .header .logo-wrapper {
   position: absolute;
   top: 29.5px;
@@ -194,6 +197,10 @@ h6 {
   justify-content: space-between;
   align-items: center;
 }
+.header__nav .nav__list-link {
+  font-size: 16px;
+  line-height: 15px;
+}
 .header__nav .nav__list-link:hover {
   color: #ffffff;
 }
@@ -205,6 +212,7 @@ h6 {
   color: #ffffff;
   font-size: 82px;
   line-height: 82px;
+  text-align: center;
 }
 .header-text {
   margin-top: 19px;
@@ -214,6 +222,7 @@ h6 {
   color: #8d81ac;
   font-size: 30px;
   line-height: 30px;
+  text-align: center;
 }
 .header-subtitle {
   margin-top: 19px;
@@ -223,6 +232,7 @@ h6 {
   font-size: 16px;
   line-height: 16px;
   color: #848e97;
+  text-align: center;
 }
 .header .download {
   position: absolute;
@@ -260,6 +270,122 @@ h6 {
   color: #848e97;
 }
 
+@media (min-width: 481px) and (max-width: 992px) {
+  .header {
+    padding-bottom: 540px;
+  }
+  .header .logo-wrapper {
+    top: 22px;
+    left: 20px;
+  }
+  .header .buy-button {
+    top: 24px;
+    right: 20px;
+  }
+  .header__nav {
+    padding: 83px 125.5px 14px;
+    background-color: #27262a;
+  }
+  .header__nav .nav__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav .nav__list-link {
+    line-height: 18px;
+  }
+  .header-title {
+    margin-top: 69px;
+    font-size: 82px;
+    line-height: 72px;
+  }
+  .header-text {
+    font-size: 24px;
+    line-height: 24px;
+  }
+  .header-subtitle {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  .header .menu {
+    position: absolute;
+    display: block;
+    right: 15px;
+    top: 41px;
+  }
+  .header .menu .line-wrapper {
+    position: relative;
+    width: 26px;
+    height: 21px;
+  }
+  .header .menu .line-wrapper .line {
+    position: absolute;
+    right: 0;
+    width: 26px;
+    border: 1.5px solid #ffffff;
+    border-radius: 3px;
+    background-color: #ffffff;
+  }
+  .header .menu .line-wrapper .first {
+    width: 15px;
+    top: 0;
+  }
+  .header .menu .line-wrapper .second {
+    top: 9px;
+  }
+  .header .menu .line-wrapper .third {
+    top: 18px;
+  }
+  .header .logo-wrapper {
+    top: 31px;
+    left: 16px;
+  }
+  .header .logo-wrapper .logo-title {
+    display: none;
+  }
+  .header .buy-button {
+    top: 33px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .header__nav .nav__list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header__nav .nav__list-link {
+    line-height: 18px;
+  }
+  .header-title {
+    margin-top: 49px;
+    font-size: 48px;
+    line-height: 48px;
+  }
+  .header-text {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  .header-subtitle {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .header .download-button {
+    width: 290px;
+    padding: 11.5px 0;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .header .download__info {
+    line-height: 14px;
+  }
+}
 .container {
   padding: 0 10px;
 }
