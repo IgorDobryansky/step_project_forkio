@@ -1,0 +1,27 @@
+.section__editor-title {
+    @include font-family-montserrat-700;
+    font-size: $font-size-4xl;
+    line-height: $line-height-7xl;
+    color: $color-editor-title;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section__editor-content {
+    @include font-family-lato-400;
+    font-size: $font-size-2xs;
+    line-height: $line-height-xl;
+    color: $color-editor-content;
+    width: 861px;
+    height: 64px;
+    text-align: center;
+
+}
+
+.button_item {
+    padding: 3px 12px;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: $color-editor-btn-bg;
+    border-color: $color-editor-btn-border;
+}
