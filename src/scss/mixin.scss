@@ -17,6 +17,12 @@
   font-style: italic;
 }
 
+@mixin font-family-lato-700 {
+  font-family: Lato;
+  font-weight: 700;
+  font-style: normal;
+}
+
 @mixin font-family-montserrat-400 {
   font-family: Montserrat;
   font-weight: 400;
