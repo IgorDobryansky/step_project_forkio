@@ -1,36 +1,111 @@
 .header {
-    position: relative;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 588px;
+  @include flex(flex-start, center, column);
+  background: url(../img/header/fork_app.png);
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+  .logo-wrapper {
+    position: absolute;
+    top: 29.5px;
+    left: 90px;
+    @include flex(flex-start, flex-end);
+    color: $color-nav-hover;
+    .logo-title {
+      margin: 0 0 8px 17px;
+      @include font-family-lato-700;
+      font-size: $font-size-xs;
+      line-height: $line-height-7xs;
+      text-transform: uppercase;
+    }
+    &:hover {
+      color: $color-basic;
+    }
+  }
+  .buy-button {
+    position: absolute;
+    width: 145px;
+    padding: 10px 20px;
+    top: 31px;
+    right: 90px;
+    @include font-family-montserrat-700;
+    font-size: $font-size-4xs;
+    line-height: $line-height-6xs;
+    border-radius: 39px;
+    color: $color-basic;
+    background-color: $color-nav-hover;
+    &:hover {
+      background-color: $color-basic;
+      color: $color-nav-hover;
+    }
+  }
+  &__nav {
     width: 100%;
-    max-width: 1200px;
-    padding-right: 283px;
-    margin: 0 auto;
+    padding: 40px 283px;
+    @include font-family-montserrat-700;
+    @include flex(flex-end, center);
+    color: $color-nav-hover;
+    .nav__list {
+      width: 527px;
+      padding: 3px 10px 3px 0;
+      @include flex(space-between, center);
+      &-link {
+        &:hover {
+          color: $color-basic;
+        }
+      }
+    }
+  }
+  &-title {
+    margin-top: 83px;
+    @include font-family-montserrat-700;
+    color: $color-basic;
+    font-size: $font-size-7xl;
+    line-height: $line-height-10xl;
+  }
+  &-text {
+    margin-top: 19px;
+    @include font-family-lato-400;
+    color: $color-nav-hover;
+    font-size: $font-size-l;
+    line-height: $line-height-l-xl;
+  }
+  &-subtitle {
+    margin-top: 19px;
+    @include font-family-montserrat-400;
+    font-size: $font-size-4xs;
+    line-height: $line-height-7xs;
+    color: $color-comment;
+  }
+  .download {
+    position: absolute;
+    left: 50%;
+    top: 800px;
+    transform: translate(-50%, -32px);
     @include flex(flex-start, center, column);
-    background-image: url(../img/header/fork_app.png);
-    .logo-wrapper {
-        position: absolute;
-        top: 29.5px;
-        left: 90px;
+    &-button {
+      width: 390px;
+      padding: 20px 0;
+      @include font-family-montserrat-700;
+      font-size: $font-size-2xs;
+      line-height: $line-height-2xs;
+      color: $color-basic;
+      background-color: $color-nav-hover;
+      border-radius: 62px;
+      &:hover {
+        background-color: $color-basic;
+        color: $color-nav-hover;
+      }
     }
-    .buy-button {
-        position: absolute;
-        width: 145px;
-        padding: 10px 20px;
-        top: 31px;
-        right: 90px;
-        @include font-family-montserrat-700;
-        font-size: $font-size-4xs;
-        line-height: $line-height-6xs;
-        border-radius: 39px;
+    &__info {
+      margin-top: 19px;
+      @include font-family-montserrat-400;
+      font-size: $font-size-6xs;
+      line-height: $line-height-8xs;
+      color: $color-comment;
     }
-    &__nav {
-        width: 100%;
-        @include flex(space-between, center);
-        .logo-wrapper{
-            align-self: flex-end;
-        }
-        .nav__menu {
-            width: 527px;
-            @include flex(space-between, center)
-        }
-    }
+  }
 }
