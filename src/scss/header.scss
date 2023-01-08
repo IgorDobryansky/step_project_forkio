@@ -130,10 +130,12 @@
       right: 20px;
     }
     &__nav {
-      padding: 83px 125.5px 14px;
+      padding: 83px 0 14px;
       background-color: $color-nav-993;
+      @include flex(center, flex-start);
       .nav__list {
         width: 100%;
+        max-width: 517px;
         @include flex(space-between, center);
         &-link {
           line-height: $line-height-5xs;
@@ -159,6 +161,8 @@
 @media (min-width: 320px) and (max-width: 480px) {
   .header {
     .menu {
+      z-index: 1;
+      cursor: pointer;
       position: absolute;
       display: block;
       right: 15px;
@@ -188,6 +192,7 @@
       }
     }
     .logo-wrapper {
+      z-index: 1;
       top: 31px;
       left: 16px;
       .logo-title {
@@ -195,16 +200,45 @@
       }
     }
     .buy-button {
+      z-index: 1;
       top: 33px;
       left: 50%;
       transform: translateX(-50%);
     }
     &__nav {
+      padding: 50px 0;
+      position: relative;
       .nav__list {
-        width: 100%;
-        @include flex(space-between, center);
+        position: absolute;
+        max-width: 293px;
+        padding: 0;
+        background-color: $color-nav-480;
+        left: 100%;
+        transform: translateX(-298px);
+        top: 100px;
+        display: none;
+        &-item {
+          width: 100%;
+          padding: 7.5px 0 7.5px 3px;
+          border-top: 1.5px solid $color-nav-480-border;
+          border-bottom: 1.5px solid $color-nav-480-border;
+        }
         &-link {
-          line-height: $line-height-5xs;
+          display: inline-block;
+          width: 100%;
+          padding: 10.5px 0 10.5px 37px;
+          @include font-family-montserrat-400;
+          color: $color-basic;
+          font-size: $font-size-s;
+          line-height: $line-height-m;
+          border-left: 8px solid $color-nav-480;
+          &:hover {
+            border-left: 8px solid $color-nav-hover;
+            color: $color-nav-hover;
+          }
+        }
+        &.show {
+          @include flex(flex-start, flex-start, column);
         }
       }
     }
