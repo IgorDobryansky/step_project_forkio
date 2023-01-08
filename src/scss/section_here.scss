@@ -1,0 +1,26 @@
+.section__here-title {
+    @include font-family-montserrat-700;
+    font-size: $font-size-3xl;
+    line-height: $line-height-6xl;
+    color: $color-nav-hover;
+}
+
+.section__here_features {
+    width: 540px;
+    height: 111px;
+}
+
+.section__here-subtitle {
+    @include font-family-montserrat-400;
+    font-size: $font-size-4xs;
+    line-height: $line-height-3xs;
+    color: $color-editor-content;
+}
+
+.section__here-content {
+    @include font-family-montserrat-400;
+    font-size: $font-size-6xs;
+    line-height: $line-height-3xs;
+    color: $color-comment;
+
+}

@@ -416,6 +416,38 @@ h6 {
   border-color: rgba(240, 246, 252, 0.1);
 }
 
+.section__here-title {
+  font-family: Montserrat;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 50px;
+  color: #8d81ac;
+}
+
+.section__here_features {
+  width: 540px;
+  height: 111px;
+}
+
+.section__here-subtitle {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 21px;
+  color: #323232;
+}
+
+.section__here-content {
+  font-family: Montserrat;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #848e97;
+}
+
 .container {
   padding: 0 10px;
 }
