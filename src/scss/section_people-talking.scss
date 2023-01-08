@@ -4,7 +4,14 @@
   margin: 0 auto;
   padding: 108px 0 0 0;
   @include flex(flex-start, center, column);
-  background: url(../img/testimonials.png);
+  background: url(../img/people_talking/testimonials.png);
   background-repeat: no-repeat;
   background-position: 50% 0;
+  .grid{
+    margin-top: 82px;
+    display: grid;
+    grid-template-columns: repeat(3, 315px);
+    column-gap: 122px;
+    row-gap: 109px;
+  }
 }
