@@ -1,26 +1,42 @@
-.section__here-title {
-    @include font-family-montserrat-700;
-    font-size: $font-size-3xl;
-    line-height: $line-height-6xl;
-    color: $color-nav-hover;
-}
+.section {
 
-.section__here_features {
-    width: 540px;
-    height: 111px;
-}
+    &__here {
+        display: flex;
+    }
 
-.section__here-subtitle {
-    @include font-family-montserrat-400;
-    font-size: $font-size-4xs;
-    line-height: $line-height-3xs;
-    color: $color-editor-content;
-}
+    &__here-title {
+        @include font-family-montserrat-700;
+        font-size: $font-size-3xl;
+        line-height: $line-height-6xl;
+        color: $color-nav-hover;
+    }
 
-.section__here-content {
-    @include font-family-montserrat-400;
-    font-size: $font-size-6xs;
-    line-height: $line-height-3xs;
-    color: $color-comment;
+    &__here_features {
+        width: 540px;
+        height: 111px;
+        display: flex;
+        padding-bottom: 32.17px;
+    }
 
+    &__here-card1 {
+        width: 390.89px;
+    }
+
+    &__here-cards {
+        width: 405.89px;
+    }
+
+    &__here-subtitle {
+        @include font-family-montserrat-400;
+        font-size: $font-size-4xs;
+        line-height: $line-height-3xs;
+        color: $color-editor-content;
+    }
+
+    &__here-content {
+        @include font-family-montserrat-400;
+        font-size: $font-size-6xs;
+        line-height: $line-height-3xs;
+        color: $color-comment;
+    }
 }

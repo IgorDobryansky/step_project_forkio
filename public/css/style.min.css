@@ -416,6 +416,9 @@ h6 {
   border-color: rgba(240, 246, 252, 0.1);
 }
 
+.section__here {
+  display: flex;
+}
 .section__here-title {
   font-family: Montserrat;
   font-weight: 700;
@@ -424,12 +427,18 @@ h6 {
   line-height: 50px;
   color: #8d81ac;
 }
-
 .section__here_features {
   width: 540px;
   height: 111px;
+  display: flex;
+  padding-bottom: 32.17px;
 }
-
+.section__here-card1 {
+  width: 390.89px;
+}
+.section__here-cards {
+  width: 405.89px;
+}
 .section__here-subtitle {
   font-family: Montserrat;
   font-weight: 400;
@@ -438,7 +447,6 @@ h6 {
   line-height: 21px;
   color: #323232;
 }
-
 .section__here-content {
   font-family: Montserrat;
   font-weight: 400;
