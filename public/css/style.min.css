@@ -385,6 +385,10 @@ h6 {
     line-height: 14px;
   }
 }
+.section__editor {
+  padding-bottom: 66px;
+}
+
 .section__editor-title {
   font-family: Montserrat;
   font-weight: 700;
