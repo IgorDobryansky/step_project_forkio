@@ -2,16 +2,55 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 108px 0 0 0;
+  padding: 108px 0 18.5px 0;
   @include flex(flex-start, center, column);
   background: url(../img/people_talking/testimonials.png);
   background-repeat: no-repeat;
   background-position: 50% 0;
+  background-size: auto 101%;
+  &-title{
+    @include font-family-montserrat-700;
+    font-size: $font-size-3xl;
+    line-height: $line-height-6xl;
+    color: $color-basic;
+  }
   .grid{
     margin-top: 82px;
     display: grid;
     grid-template-columns: repeat(3, 315px);
-    column-gap: 122px;
+    grid-template-rows: repeat(2, 140px);
+    column-gap: 70px;
     row-gap: 109px;
+    &__item {
+      @include flex(space-between, center, column);
+      &__text {
+        text-align: center;
+        @include font-family-lato-700-italic;
+        font-size: $font-size-4xs;
+        line-height: $line-height-s;
+        color: $color-basic;
+      }
+    }
+  }
+  &__text {
+    position: relative;
+    width: 100%;
+    max-width: 887px;
+    margin-top: 114,5px;
+    @include font-family-lato-400;
+    font-size: $font-size-6xs;
+    line-height: $line-height-3xs;
+    color: $color-talking-comment;
+    text-align: center;
+    &::after{
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, 18.5px);
+      width: 100%;
+      max-width: 780px;
+      border: 1px solid $color-talking-decor;
+    }
   }
 }
