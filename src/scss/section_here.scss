@@ -1,12 +1,14 @@
 .section {
 
     &__here {
-    
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
         display: flex;
+        justify-content: space-between
     }
+
+
 
     &__here-title {
         @include font-family-montserrat-700;
@@ -16,27 +18,27 @@
     }
 
     &__here_features {
-        width: 540px;
+        max-width: 540px;
         height: 111px;
         display: flex;
         margin-bottom: 32.17px;
     }
 
     &__here-icon1 {
-        padding-right: 23px;
+        padding-right: 6px;
     }
 
     &__here-icon2 {
-        padding-right: 44px;
+        padding-right: 27px;
     }
 
     &__here-icon3 {
-        padding-right: 59px;
+        padding-right: 42px;
         padding-left: 16px;
     }
 
     &__here-icon4 {
-        padding-right: 53px;
+        padding-right: 36px;
         padding-left: 11px;
     }
 
@@ -60,6 +62,10 @@
         font-size: $font-size-6xs;
         line-height: $line-height-3xs;
         color: $color-comment;
+    }
+
+    &__here-screen {
+        max-width: 660px;
     }
 }
 
