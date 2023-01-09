@@ -1,6 +1,10 @@
 .section {
 
     &__here {
+    
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
         display: flex;
     }
 
@@ -15,7 +19,25 @@
         width: 540px;
         height: 111px;
         display: flex;
-        padding-bottom: 32.17px;
+        margin-bottom: 32.17px;
+    }
+
+    &__here-icon1 {
+        padding-right: 23px;
+    }
+
+    &__here-icon2 {
+        padding-right: 44px;
+    }
+
+    &__here-icon3 {
+        padding-right: 59px;
+        padding-left: 16px;
+    }
+
+    &__here-icon4 {
+        padding-right: 53px;
+        padding-left: 11px;
     }
 
     &__here-card1 {
@@ -39,4 +61,12 @@
         line-height: $line-height-3xs;
         color: $color-comment;
     }
+}
+
+.subtitle1 {
+    margin-bottom: 16.86px;
+}
+
+.subtitle2 {
+    margin-bottom: 16.27px;
 }
