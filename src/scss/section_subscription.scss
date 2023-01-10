@@ -1,0 +1,135 @@
+.section__subscription {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    @include flex(flex-start, center, column);
+    padding: 83px 0 73px;
+    background-image: url(../img/subscription/pricing.png);
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    // background-color: rgba(75, 77, 77, 0.4);
+    text-align: center;
+}
+
+.section{
+
+    // &__subscription {
+    //     background-image: url(../img/Layer\ 1.png);
+    // }
+
+    &__subscription-title {
+        @include font-family-montserrat-700;
+        font-size: $font-size-3xl;
+        line-height: $line-height-6xl;
+        color: $color-basic;
+        text-transform: uppercase;
+        padding-bottom: 61px;
+    }
+
+    &__cards {
+        display: flex;
+    }
+    
+    &__cards-item {
+        width: 257px;
+        height: 457px;   
+    }
+
+    &__cards-item:first-child {
+        margin-right: 15px;
+    }
+    
+    &__cards-itembig {
+        width: 299px;
+        height: 560px;
+        background-color: rgba(255, 255, 255, 0.06);
+        margin: 0 15px;
+    }
+    
+    &__cards-title {
+        @include font-family-montserrat-400;
+        font-size: $font-size-xs;
+        line-height: $line-height-s;
+        color: $color-basic;
+        text-transform: uppercase;
+        padding: 36px 58px;
+        background-color: rgba(255, 255, 255, 0.06) !important;
+    }
+    
+    &__cards-price {
+        @include font-family-montserrat-400;
+        font-size: $font-size-5xl;
+        line-height: $line-height-11xl;
+        color: $color-basic;
+        text-transform: uppercase;
+        padding-top: 30px;
+        // text-align: center;
+    }
+    
+    &__cards-pricebig {
+        @include font-family-montserrat-400;
+        font-size: $font-size-7xl;
+        line-height: $line-height-11xl;
+        color: $color-basic;
+        text-transform: uppercase;
+        padding-top: 14px;
+        padding-bottom: 16px;
+        // text-align: center;
+    }
+
+    &__cards-period {
+        @include font-family-montserrat-400;
+        font-size: $font-size-6xs;
+        line-height: $line-height-7xs;
+        color: $color-basic;
+        text-transform: uppercase;
+        // text-align: center
+    }
+
+    &__line {
+        // @include flex($justify: center, $align, $direction: row);
+        display: flex;
+        justify-content: center
+    }
+    
+    &__cards-description {
+        @include font-family-montserrat-400;
+        font-size: $font-size-4xs;
+        line-height: $line-height-5xs;
+        color: $color-basic;
+        padding-top: 36px;
+        padding-bottom: 62px;
+        // text-align: center;
+    }
+    
+    &__cards-button {
+        width: 163px;
+        height: 45px; 
+        border-radius: 20px;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.15);
+        @include font-family-montserrat-400;
+        font-size: $font-size-5xs;
+        line-height: $line-height-8xs;
+        color: $color-basic;
+        text-transform: uppercase;
+    }
+    
+    }
+    
+    .line {
+        border-bottom: 5px solid $color-nav-hover;
+        width: 60px;
+        padding-top: 38px;
+        text-align: center;
+    } 
+
+    .linebig {
+        padding-top: 46px;
+        margin-bottom: 4px;
+    }
+    
+    @media (min-width: 768px) and (max-width: 1199px) {
+        
+    }
+    
