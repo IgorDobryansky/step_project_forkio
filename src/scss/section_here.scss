@@ -4,9 +4,11 @@
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+        padding-top: 98px;
         display: flex;
         background-color: $color-here-bg;
-        justify-content: space-between
+        justify-content: space-between;
+        padding-bottom: 72px;
     }
 
 
@@ -22,8 +24,12 @@
         max-width: 540px;
         height: 111px;
         display: flex;
-        margin-bottom: 32.17px;
+        &:not(:last-child){
+            margin-bottom: 32.17px;
+        }
     }
+
+
 
     &__here-icon1 {
         padding-right: 6px;
