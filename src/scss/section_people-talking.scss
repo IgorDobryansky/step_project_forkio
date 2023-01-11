@@ -95,3 +95,39 @@
     }
   }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .talking {
+    max-width: 480px;
+    padding: 57px 17px 22px 17px;
+    background-size: auto 101%;
+    &-title {
+      font-size: $font-size-xl;
+      line-height: $line-height-5xl;
+    }
+    .grid {
+      margin-top: 53px;
+      width: 100%;
+      max-width: 480px;
+      display: grid;
+      grid-template-columns: repeat(1, minmax(min-content, 1fr));
+      row-gap: 41px;
+      &__item {
+        @include flex(space-between, center, column);
+        .logo-wrapper img {
+          width: 100%;
+        }
+      }
+    }
+    &__text {
+      width: 100%;
+      max-width: 410px;
+      margin-top: 29px;
+      &::after {
+        content: "";
+        transform: translate(-50%, 21.5px);
+        max-width: 410px;
+      }
+    }
+  }
+}
