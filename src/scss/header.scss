@@ -171,23 +171,37 @@
         position: relative;
         width: 26px;
         height: 21px;
-        .line {
+        .menu__line {
           position: absolute;
           right: 0;
           width: 26px;
           border: 1.5px solid $color-basic;
           border-radius: 3px;
           background-color: $color-basic;
+          &.run-over {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
         }
-        .first {
+        .menu__line--first {
           width: 15px;
           top: 0;
+          &.hide {
+            display: none;
+          }
         }
-        .second {
+        .menu__line--second {
           top: 9px;
+          &.rotate-plus {
+            transform: translate(-50%, -50%) rotate(45deg);
+          }
         }
-        .third {
+        .menu__line--third {
           top: 18px;
+          &.rotate-minus {
+            transform: translate(-50%, -50%) rotate(-45deg);
+          }
         }
       }
     }
@@ -207,6 +221,7 @@
     }
     &__nav {
       padding: 50px 0;
+      background-color: $color-nav-993;
       position: relative;
       .nav__list {
         position: absolute;
