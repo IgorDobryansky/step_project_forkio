@@ -41,3 +41,21 @@
         color: $color-comment;
     }
 }
+
+@media (min-width: 481px) and (max-width: 992px) {
+
+    .section {
+
+        &__here-title {
+            display: none;
+        }
+
+        &__here {
+            display: block;
+        }
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+}
