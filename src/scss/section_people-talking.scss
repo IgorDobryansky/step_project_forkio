@@ -8,21 +8,28 @@
   background-repeat: no-repeat;
   background-position: 50% 0;
   background-size: auto 101%;
-  &-title{
+  &-title {
     @include font-family-montserrat-700;
     font-size: $font-size-3xl;
     line-height: $line-height-6xl;
     color: $color-basic;
+    text-align: center;
   }
-  .grid{
+  .grid {
     margin-top: 82px;
+    width: 100%;
+    max-width: 1189px;
     display: grid;
-    grid-template-columns: repeat(3, 315px);
-    grid-template-rows: repeat(2, 140px);
-    column-gap: 70px;
+    grid-template-columns: repeat(3, minmax(min-content, 315px));
+    grid-template-rows: repeat(2);
+    justify-content: space-between;
     row-gap: 109px;
+    column-gap: 100px;
     &__item {
       @include flex(space-between, center, column);
+      .logo-wrapper img {
+        width: 100%;
+      }
       &__text {
         text-align: center;
         @include font-family-lato-700-italic;
@@ -36,14 +43,14 @@
     position: relative;
     width: 100%;
     max-width: 887px;
-    margin-top: 114,5px;
+    margin-top: 114px;
     @include font-family-lato-400;
     font-size: $font-size-6xs;
     line-height: $line-height-3xs;
     color: $color-talking-comment;
     text-align: center;
-    &::after{
-      content: '';
+    &::after {
+      content: "";
       position: absolute;
       left: 50%;
       top: 100%;
@@ -51,6 +58,40 @@
       width: 100%;
       max-width: 780px;
       border: 1px solid $color-talking-decor;
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+  .talking {
+    max-width: 992px;
+    padding: 86px 18px 19.5px 18px;
+    &-title {
+      @include font-family-montserrat-700;
+      font-size: $font-size-2xl;
+      line-height: $line-height-4xl;
+    }
+    .grid {
+      margin-top: 85px;
+      grid-template-columns: repeat(2, minmax(150px, 315px));
+      grid-template-rows: repeat(2);
+      row-gap: 61.5px;
+      &__item {
+        &__text {
+          font-size: $font-size-4xs;
+          line-height: $line-height-s;
+        }
+      }
+    }
+    &__text {
+      width: 100%;
+      max-width: 704px;
+      margin-top: 67px;
+      font-size: $font-size-6xs;
+      line-height: $line-height-3xs;
+      &::after {
+        max-width: 780px;
+      }
     }
   }
 }
