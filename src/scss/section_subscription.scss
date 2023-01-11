@@ -173,7 +173,7 @@
             }
 
             &__cards-item:first-child {
-                margin-right: 25px;
+                margin-right: 25px;    
             }
 
             &__cards-part1 {
@@ -204,7 +204,8 @@
                 @include font-family-montserrat-700;
                 font-size: $font-size-m;
                 line-height: $line-height-3xl;
-                padding-bottom: 39px;
+                padding-bottom: 32px;
+                width: 320px;
             }
 
             &__cards {
