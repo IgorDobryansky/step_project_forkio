@@ -11,8 +11,6 @@
         padding-bottom: 72px;
     }
 
-
-
     &__here-title {
         @include font-family-montserrat-700;
         font-size: $font-size-3xl;
@@ -28,8 +26,6 @@
             margin-bottom: 32.17px;
         }
     }
-
-
 
     &__here-icon1 {
         padding-right: 6px;
@@ -83,4 +79,125 @@
 
 .subtitle2 {
     margin-bottom: 16.27px;
+}
+
+.media-title {
+    display: none;
+}
+
+@media (min-width: 481px) and (max-width: 992px) {
+
+    .section {
+
+        &__here-title {
+            display: none;
+        }
+
+        &__here {
+            display: block;
+            padding-top: 62px;
+            padding-bottom: 0px;
+            background-color: transparent;
+        }
+
+        &__here_main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__here_features {
+            margin-bottom: 55px !important;
+        }
+
+        &__here-media-title {
+            display: flex;
+            justify-content: center;
+        }
+
+        &__here-content {
+            max-width: 588px;
+        }
+    }
+
+    .media-title {
+        display: block !important;
+        @include font-family-montserrat-700;
+        font-size: $font-size-2xl;
+        line-height: $line-height-4xl;
+        padding-bottom: 54px;
+    }
+
+    .screen {
+        display: flex;
+        justify-content: end;
+    }
+}
+
+
+@media (max-width: 480px) {
+    
+    .section {
+
+        &__here-title {
+            display: none;
+        }
+
+        &__here {
+            display: flex;
+            flex-direction: column;
+            padding-top: 32px;
+            padding-bottom: 6px;
+            align-items: center;
+            text-align: center;
+            background-color: transparent;
+        }
+
+        &__here_features {
+            flex-direction: column;
+            align-items: center;
+            height: 216px !important;
+            width: 277px;
+            margin-bottom: 73px !important;
+        }
+
+        &__here-card1 {
+            text-align: center;
+            width: 277px;
+        }
+
+        &__here-cards{
+            text-align: center;
+            width: 277px;
+        }
+
+        &__here-subtitle {
+            line-height: $line-height-7xs;
+            padding-top: 22px;
+            padding-bottom: 14px;
+        }
+
+        &__here-media-title {
+            display: block;
+        }
+
+        &__here-content {
+            height: 77px;
+        }
+
+    }
+    
+    .media-title {
+        display: block !important;
+        @include font-family-montserrat-700;
+        font-size: $font-size-l-xl;
+        line-height: $line-height-2xl;
+        padding-bottom: 36px;
+    }
+
+    .screen {
+        display: flex;
+        justify-content: end;
+    }
+   
 }
