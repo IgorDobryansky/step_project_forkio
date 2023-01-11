@@ -178,29 +178,41 @@
           border: 1.5px solid $color-basic;
           border-radius: 3px;
           background-color: $color-basic;
-          &.run-over {
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          &--first {
+            width: 15px;
+            top: 0;
+            &.hide {
+              animation: 100ms ease-in-out hide;
+            }
+            
           }
-        }
-        .menu__line--first {
-          width: 15px;
-          top: 0;
-          &.hide {
-            display: none;
+          &--second {
+            top: 9px;
+            &.rotate-plus {
+              transform: translate(-50%, -50%) rotate(45deg);
+            }
           }
-        }
-        .menu__line--second {
-          top: 9px;
-          &.rotate-plus {
-            transform: translate(-50%, -50%) rotate(45deg);
+          &--third {
+            top: 18px;
+            &.rotate-minus {
+              transform: translate(-50%, -50%) rotate(-45deg);
+            }
           }
-        }
-        .menu__line--third {
-          top: 18px;
-          &.rotate-minus {
-            transform: translate(-50%, -50%) rotate(-45deg);
+          @keyframes run-over {
+            100% {
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+            }
+          }
+          @keyframes hide {
+            0% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+              display: none;
+            }
           }
         }
       }
