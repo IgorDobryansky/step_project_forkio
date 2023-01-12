@@ -8,6 +8,7 @@
     @include flex(flex-start, center, column);
     padding: 112px 0 73px;
     background-image: url(../img/subscription/pricing.png);
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: 50% 0;
     text-align: center;
@@ -159,6 +160,7 @@
                 background-image: url(../img/subscription/pricing2.png);
                 padding-top: 88px;
                 padding-bottom: 94px;
+                overflow: hidden;
             }
 
             &__cards {
@@ -181,7 +183,8 @@
             }
 
             &__cards-part2 {
-                margin-left: -53px;
+                margin-left: -53px; 
+                
             }
 
             &__cards-itembig {
