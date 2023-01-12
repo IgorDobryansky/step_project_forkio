@@ -9,6 +9,7 @@
         background-color: $color-here-bg;
         justify-content: space-between;
         padding-bottom: 72px;
+        overflow: hidden;
     }
 
     &__here-title {
@@ -110,11 +111,6 @@
             margin-bottom: 55px !important;
         }
 
-        &__here-media-title {
-            display: flex;
-            justify-content: center;
-        }
-
         &__here-content {
             max-width: 588px;
         }
@@ -126,6 +122,7 @@
         font-size: $font-size-2xl;
         line-height: $line-height-4xl;
         padding-bottom: 54px;
+        text-align: center;
     }
 
     .screen {
@@ -135,7 +132,7 @@
 }
 
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
     
     .section {
 
