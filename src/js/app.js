@@ -13,8 +13,7 @@ logoWrapper.addEventListener("mouseout", () => {
   logoImage.src = "@img/header/navbar-logo.png";
 });
 
-menuButton.addEventListener("click", (e) => {
-  console.log(e.currentTarget);
+function toggleMenu() {
   menuList.classList.toggle("show");
   menuLines.forEach((line) => {
     line.classList.toggle("run-over");
@@ -22,4 +21,19 @@ menuButton.addEventListener("click", (e) => {
   menuLines[0].classList.toggle("hide");
   menuLines[1].classList.toggle("rotate-plus");
   menuLines[2].classList.toggle("rotate-minus");
+}
+
+menuButton.addEventListener("click", (e) => {
+  e.stopPropagation();
+  toggleMenu();
+});
+
+document.addEventListener("click", (e) => {
+  let target = e.target;
+  let its_menuList = target === menuList || menuList.contains(target);
+  let its_menuButton = target === menuButton;
+  let menu_is_show = menuList.classList.contains("show");
+  if (!its_menuList && !its_menuButton && menu_is_show) {
+    toggleMenu();
+  }
 });
