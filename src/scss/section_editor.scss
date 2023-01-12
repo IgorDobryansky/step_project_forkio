@@ -1,7 +1,7 @@
 .section {
 
     &__editor {
-        padding-bottom: 70px
+        padding-bottom: 70px;
     }
     
     &__editor-title {
@@ -96,13 +96,10 @@
     border-color: rgba(27,31,36,.15);
 }
 
-
 .social-count {
     border-left: 0;
     border-radius: 0 0.25em 0.25em 0;
 }
-
-
 
 .button_item {
     padding: 3px 12px;
@@ -119,7 +116,6 @@ svg {
     margin-right: 3px;
 } 
 
-
 .text {
     color: #24292f;
     border-radius: 0.25em 0 0 0.25em;
@@ -132,3 +128,62 @@ svg {
     padding: 0 6px;
     text-align: center;
 }
+
+@media (min-width: 481px) and (max-width: 992px) {
+
+    .section {
+
+        &__editor {
+            padding-bottom: 98px;
+        }
+        &__editor-title {
+            @include font-family-montserrat-700;
+            font-size: $font-size-2xl;
+            line-height: $line-height-3xl;
+            padding-bottom: 33px;
+        }
+
+        &__editor-btn {
+            padding-top: 24px;
+        }        
+    } 
+}  
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+    .section {
+
+        &__editor {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 88px;
+        }
+
+        &__editor-title {
+            @include font-family-montserrat-700;
+            font-size: $font-size-s;
+            line-height: $line-height-l;
+            padding-bottom: 27px;
+        }
+
+        &__editor-content {
+            @include font-family-lato-400;
+            font-size: $font-size-6xs;
+            line-height: $line-height-4xs;
+            width: 276px;
+        }
+
+        &__editor-btn {
+            padding-top: 36px;
+        }
+
+        &__editor-btn {
+            width: 300px;
+        }    
+    } 
+
+    .btn1 {
+        padding-bottom: 20px;
+    }
+}   
