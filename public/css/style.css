@@ -547,7 +547,7 @@ svg {
   display: grid;
   grid-template-columns: repeat(3, minmax(min-content, 315px));
   grid-template-rows: repeat(2);
-  justify-content: space-between;
+  justify-content: center;
   row-gap: 109px;
   -moz-column-gap: 100px;
        column-gap: 100px;
