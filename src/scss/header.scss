@@ -276,6 +276,7 @@
       line-height: $line-height-9xs;
     }
     .download {
+      transform: translate(-50%, -22px);
       &-button {
         width: 290px;
         padding: 11.5px 0;
