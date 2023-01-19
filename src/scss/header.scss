@@ -1,290 +1,373 @@
 .header {
   position: relative;
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-bottom: 588px;
-  @include flex(flex-start, center, column);
   background: url(../img/header/fork_app.png);
   background-repeat: no-repeat;
-  background-position: 50% 0;
-  .menu {
-    display: none;
-  }
-  .logo-wrapper {
-    position: absolute;
-    top: 29.5px;
-    left: 90px;
-    @include flex(flex-start, flex-end);
-    color: $color-nav-hover;
-    .logo-title {
-      margin: 0 0 8px 17px;
-      @include font-family-lato-700;
-      font-size: $font-size-xs;
-      line-height: $line-height-7xs;
-      text-transform: uppercase;
-    }
-    &:hover {
-      color: $color-basic;
-    }
-  }
-  .buy-button {
-    position: absolute;
-    width: 145px;
-    padding: 10px 20px;
-    top: 31px;
-    right: 90px;
-    @include font-family-montserrat-700;
-    font-size: $font-size-4xs;
-    line-height: $line-height-6xs;
-    border-radius: 39px;
-    color: $color-basic;
-    background-color: $color-nav-hover;
-    &:hover {
-      background-color: $color-basic;
+  background-position: 50% 100%;
+  background-size: cover;
+  .header-container {
+    @include flex(flex-start, center, column);
+    .header__nav {
+      .menu {
+        display: none;
+      }
+      position: relative;
+      padding-left: 10px;
+      padding-right: 195px;
+      width: 100%;
+      max-width: 1200px;
+      height: 100px;
+      @include font-family-montserrat-700;
+      @include flex(flex-end, center);
       color: $color-nav-hover;
-    }
-  }
-  &__nav {
-    width: 100%;
-    padding: 40px 283px;
-    @include font-family-montserrat-700;
-    @include flex(flex-end, center);
-    color: $color-nav-hover;
-    .nav__list {
-      width: 527px;
-      padding: 3px 10px 3px 0;
-      @include flex(space-between, center);
-      &-link {
-        font-size: $font-size-4xs;
-        line-height: $line-height-8xs;
+      .nav__list {
+        width: 527px;
+        padding: 3px 10px 3px 0;
+        @include flex(space-between, center);
+        &-link {
+          font-size: $font-size-4xs;
+          line-height: $line-height-6xs;
+          &:hover {
+            color: $color-basic;
+          }
+        }
+      }
+      .logo-wrapper {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        @include flex(flex-start, flex-end);
+        color: $color-nav-hover;
+        .logo-title {
+          margin: 0 0 8px 17px;
+          @include font-family-lato-700;
+          font-size: $font-size-xs;
+          line-height: $line-height-7xs;
+          text-transform: uppercase;
+        }
         &:hover {
           color: $color-basic;
         }
       }
-    }
-  }
-  &-title {
-    margin-top: 83px;
-    @include font-family-montserrat-700;
-    color: $color-basic;
-    font-size: $font-size-7xl;
-    line-height: $line-height-10xl;
-    text-align: center;
-  }
-  &-text {
-    margin-top: 19px;
-    @include font-family-lato-400;
-    color: $color-nav-hover;
-    font-size: $font-size-l;
-    line-height: $line-height-l-xl;
-    text-align: center;
-  }
-  &-subtitle {
-    margin-top: 19px;
-    @include font-family-montserrat-400;
-    font-size: $font-size-4xs;
-    line-height: $line-height-7xs;
-    color: $color-comment;
-    text-align: center;
-  }
-  .download {
-    position: absolute;
-    left: 50%;
-    top: 800px;
-    transform: translate(-50%, -32px);
-    @include flex(flex-start, center, column);
-    &-button {
-      width: 390px;
-      padding: 20px 0;
-      @include font-family-montserrat-700;
-      font-size: $font-size-2xs;
-      line-height: $line-height-2xs;
-      color: $color-basic;
-      background-color: $color-nav-hover;
-      border-radius: 62px;
-      &:hover {
-        background-color: $color-basic;
-        color: $color-nav-hover;
+      .buy-button {
+        position: absolute;
+        width: 147px;
+        padding: 10px 20px;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        @include font-family-montserrat-700;
+        font-size: $font-size-4xs;
+        line-height: $line-height-6xs;
+        border: 1px solid $color-nav-hover;
+        border-radius: 39px;
+        color: $color-basic;
+        background-color: $color-nav-hover;
+        &:hover {
+          background-color: $color-basic;
+          color: $color-nav-hover;
+        }
       }
     }
-    &__info {
+    .header-title {
+      margin-top: 83px;
+      @include font-family-montserrat-700;
+      color: $color-basic;
+      font-size: $font-size-7xl;
+      line-height: $line-height-10xl;
+      text-align: center;
+    }
+    .header-text {
       margin-top: 19px;
+      @include font-family-lato-400;
+      color: $color-nav-hover;
+      font-size: $font-size-l;
+      line-height: $line-height-l-xl;
+      text-align: center;
+    }
+    .header-subtitle {
+      margin-top: 19px;
+      margin-bottom: 459px;
       @include font-family-montserrat-400;
-      font-size: $font-size-6xs;
-      line-height: $line-height-8xs;
+      font-size: $font-size-4xs;
+      line-height: $line-height-7xs;
       color: $color-comment;
+      text-align: center;
+    }
+    .download {
+      position: absolute;
+      left: 50%;
+      top: 100%;
+      transform: translate(-50%, -31px);
+      @include flex(flex-start, center, column);
+      &-button {
+        width: 390px;
+        padding: 18px 0;
+        @include font-family-montserrat-700;
+        font-size: $font-size-2xs;
+        line-height: $line-height-2xs;
+        color: $color-basic;
+        background-color: $color-nav-hover;
+        border: 2px solid $color-nav-hover;
+        border-radius: 62px;
+        &:hover {
+          background-color: $color-basic;
+          color: $color-nav-hover;
+        }
+      }
+      &__info {
+        margin-top: 19px;
+        @include font-family-montserrat-400;
+        font-size: $font-size-6xs;
+        line-height: $line-height-8xs;
+        color: $color-comment;
+      }
     }
   }
 }
 
 @media (min-width: 481px) and (max-width: 992px) {
   .header {
-    padding-bottom: 540px;
-    .logo-wrapper {
-      top: 22px;
-      left: 20px;
-    }
-    .buy-button {
-      top: 24px;
-      right: 20px;
-    }
-    &__nav {
-      padding: 83px 0 14px;
-      background-color: $color-nav-993;
-      @include flex(center, flex-start);
-      .nav__list {
+    .header-container {
+      .header__nav {
+        position: relative;
+        padding: 0 10px 14px 10px;
         width: 100%;
-        max-width: 517px;
-        @include flex(space-between, center);
-        &-link {
-          line-height: $line-height-5xs;
+        max-width: 992px;
+        height: 118px;
+        @include flex(center, flex-end);
+        color: $color-nav-hover;
+        background-color: $color-nav-993;
+        .nav__list {
+          &-link {
+            line-height: $line-height-5xs;
+          }
+        }
+        .logo-wrapper {
+          top: 22px;
+          left: 20px;
+          transform: translateY(0);
+        }
+        .buy-button {
+          width: 145px;
+          padding: 9px 20px;
+          top: 24px;
+          right: 20px;
+          transform: translateY(0);
+          line-height: $line-height-7xs;
+          border-radius: 37px;
         }
       }
-    }
-    &-title {
-      margin-top: 69px;
-      font-size: $font-size-7xl;
-      line-height: $line-height-9xl;
-    }
-    &-text {
-      font-size: $font-size-xs;
-      line-height: $line-height-s;
-    }
-    &-subtitle {
-      font-size: $font-size-6xs;
-      line-height: $line-height-9xs;
+      .header-title {
+        margin-top: 69px;
+        font-size: $font-size-6xl;
+        line-height: $line-height-9xl;
+      }
+      .header-text {
+        font-size: $font-size-xs;
+        line-height: $line-height-s;
+      }
+      .header-subtitle {
+        margin-bottom: 472px;
+        font-size: $font-size-6xs;
+        line-height: $line-height-9xs;
+      }
+      .download {
+        &-button {
+          font-size: $font-size-2xs;
+          line-height: $line-height-xs;
+        }
+        &__info {
+          margin-top: 18.5px;
+          line-height: $line-height-7xs;
+        }
+      }
     }
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 1px) and (max-width: 480px) {
   .header {
-    .menu {
-      z-index: 1;
-      cursor: pointer;
-      position: absolute;
-      display: block;
-      right: 15px;
-      top: 41px;
-      .line-wrapper {
-        position: relative;
-        width: 26px;
-        height: 21px;
-        .menu__line {
+    .header-container {
+      .header__nav {
+        .menu {
+          cursor: pointer;
           position: absolute;
-          right: 0;
-          width: 26px;
-          border: 1.5px solid $color-basic;
-          border-radius: 3px;
-          background-color: $color-basic;
-          transition: 100ms ease-in-out;
-          &--first {
-            width: 15px;
-            top: 0;
-            &.hide {
-              display: none;
-            }
-          }
-          &--second {
-            top: 9px;
-            &.run-over {
-              top: 50%;
-              transform: translateY(-50%);
-            }
-            &.rotate-plus {
-              transform: translateY(-50%) rotate(45deg);
-            }
-          }
-          &--third {
-            top: 18px;
-            &.run-over {
-              top: 50%;
-              transform: translateY(-50%);
-            }
-            &.rotate-minus {
-              transform: translateY(-50%) rotate(-45deg);
+          display: block;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          .line-wrapper {
+            position: relative;
+            width: 26px;
+            height: 21px;
+            .menu__line {
+              position: absolute;
+              right: 0;
+              width: 26px;
+              border: 1.5px solid $color-basic;
+              border-radius: 3px;
+              background-color: $color-basic;
+              transition: 100ms ease-in-out;
+              &--first {
+                width: 15px;
+                top: 0;
+                animation: 3000ms linear move-short infinite;
+                &.hide {
+                  display: none;
+                }
+                @keyframes move-short {
+                  0% {
+                    width: 15px;
+                  }
+                  17% {
+                    width: 26px;
+                  }
+                  34% {
+                    left: 0;
+                  }
+                  51% {
+                    width: 15px;
+                  }
+                  68% {
+                    width: 26px;
+                  }
+                  85% {
+                    right: 0;
+                  }
+                  100% {
+                    width: 15px;
+                  }
+                }
+              }
+              &--second {
+                top: 9px;
+                &.run-over {
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+                &.rotate-plus {
+                  transform: translateY(-50%) rotate(45deg);
+                }
+              }
+              
+              &--third {
+                top: 18px;
+                &.run-over {
+                  top: 50%;
+                  transform: translateY(-50%);
+                }
+                &.rotate-minus {
+                  transform: translateY(-50%) rotate(-45deg);
+                }
+              }
             }
           }
         }
-      }
-    }
-    .logo-wrapper {
-      z-index: 1;
-      top: 31px;
-      left: 16px;
-      .logo-title {
-        display: none;
-      }
-    }
-    .buy-button {
-      z-index: 1;
-      top: 33px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    &__nav {
-      padding: 50px 0;
-      background-color: $color-nav-993;
-      position: relative;
-      .nav__list {
-        position: absolute;
-        max-width: 293px;
-        padding: 0;
-        background-color: $color-nav-480;
-        left: 100%;
-        transform: translateX(-298px);
-        top: 100px;
-        display: none;
-        &-item {
-          width: 100%;
-          padding: 7.5px 0 7.5px 3px;
-          border-top: 1.5px solid $color-nav-480-border;
-          border-bottom: 1.5px solid $color-nav-480-border;
+        position: relative;
+        padding: 0 10px;
+        width: 100%;
+        max-width: 480px;
+        height: 103px;
+        color: $color-nav-hover;
+        background-color: $color-nav-993;
+        .nav__list {
+          position: absolute;
+          max-width: 293px;
+          padding: 0;
+          background-color: $color-nav-480;
+          left: 100%;
+          transform: translateX(-298px);
+          top: 100px;
+          display: none;
+          &-item {
+            width: 100%;
+            padding: 7.5px 0 7.5px 3px;
+            border-top: 1.5px solid $color-nav-480-border;
+            border-bottom: 1.5px solid $color-nav-480-border;
+          }
+          &-link {
+            display: inline-block;
+            width: 100%;
+            padding: 23px 0 23px 37px;
+            @include font-family-montserrat-400;
+            color: $color-basic;
+            font-size: $font-size-s;
+            line-height: $line-height-m;
+            border-left: 8px solid $color-nav-480;
+            &:hover {
+              border-left: 8px solid $color-nav-hover;
+              color: $color-nav-hover;
+            }
+          }
+          &.show {
+            @include flex(flex-start, flex-start, column);
+          }
         }
-        &-link {
-          display: inline-block;
-          width: 100%;
-          padding: 10.5px 0 10.5px 37px;
-          @include font-family-montserrat-400;
-          color: $color-basic;
-          font-size: $font-size-s;
-          line-height: $line-height-m;
-          border-left: 8px solid $color-nav-480;
+        .logo-wrapper {
+          position: absolute;
+          top: 50%;
+          left: 15px;
+          transform: translateY(-50%);
+          .logo-title {
+            display: none;
+          }
           &:hover {
-            border-left: 8px solid $color-nav-hover;
+            color: $color-basic;
+          }
+        }
+        .buy-button {
+          position: absolute;
+          width: 147px;
+          padding: 10px 20px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          @include font-family-montserrat-700;
+          font-size: $font-size-4xs;
+          line-height: $line-height-6xs;
+          border: 1px solid $color-nav-hover;
+          border-radius: 39px;
+          color: $color-basic;
+          background-color: $color-nav-hover;
+          &:hover {
+            background-color: $color-basic;
             color: $color-nav-hover;
           }
         }
-        &.show {
-          @include flex(flex-start, flex-start, column);
-        }
       }
-    }
-    &-title {
-      margin-top: 49px;
-      font-size: $font-size-3xl;
-      line-height: $line-height-5xl;
-    }
-    &-text {
-      font-size: $font-size-3xs;
-      line-height: $line-height-s;
-    }
-    &-subtitle {
-      margin-top: 14px;
-      font-size: $font-size-6xs;
-      line-height: $line-height-9xs;
-    }
-    .download {
-      transform: translate(-50%, -22px);
-      &-button {
-        width: 290px;
-        padding: 11.5px 0;
+      .header-title {
+        margin-top: 49px;
+        font-size: $font-size-3xl;
+        line-height: $line-height-5xl;
+        padding: 0 10px;
+      }
+      .header-text {
         font-size: $font-size-3xs;
-        line-height: $line-height-4xs;
+        line-height: $line-height-s;
+        padding: 0 10px;
       }
-      &__info {
+      .header-subtitle {
+        margin-top: 14px;
+        margin-bottom: 392px;
+        font-size: $font-size-6xs;
         line-height: $line-height-9xs;
+        padding: 0 10px;
+      }
+      .download {
+        transform: translate(-50%, -22.5px);
+        &-button {
+          width: 290px;
+          padding: 10.5px 0;
+          font-size: $font-size-3xs;
+          line-height: $line-height-4xs;
+          border-radius: 45px;
+        }
+        &__info {
+          margin-top: 12.5px;
+          line-height: $line-height-9xs;
+        }
       }
     }
   }
