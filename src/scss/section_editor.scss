@@ -149,7 +149,7 @@ svg {
     } 
 }  
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
 
     .section {
 
@@ -158,6 +158,7 @@ svg {
             flex-direction: column;
             align-items: center;
             padding-bottom: 88px;
+            overflow: hidden;
         }
 
         &__editor-title {
