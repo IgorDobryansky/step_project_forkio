@@ -5,6 +5,7 @@
     }
     
     &__editor-title {
+        margin-top: 129px;
         @include font-family-montserrat-700;
         font-size: $font-size-4xl;
         line-height: $line-height-7xl;
@@ -137,6 +138,7 @@ svg {
             padding-bottom: 98px;
         }
         &__editor-title {
+            margin-top: 156px;
             @include font-family-montserrat-700;
             font-size: $font-size-2xl;
             line-height: $line-height-3xl;
@@ -162,6 +164,7 @@ svg {
         }
 
         &__editor-title {
+            margin-top: 122px;
             @include font-family-montserrat-700;
             font-size: $font-size-s;
             line-height: $line-height-l;
