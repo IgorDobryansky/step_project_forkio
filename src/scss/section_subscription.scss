@@ -3,15 +3,17 @@
     &__subscription1 {
         background-image: url(../img/subscription/pricing.png);
         background-size: 100%;
+        width: 100%;
     }
 
     &__subscription {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    @include flex(flex-start, center, column);
-    padding: 112px 0 73px;
-    text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding: 112px 10px 73px 10px;
+        text-align: center;
+        align-items: center
     }
 
     &__subscription-title {
@@ -24,34 +26,30 @@
     }
 
     &__cards {
-        display: flex;
         align-items: center;
+        display: grid;
+        grid-template-columns: minmax(1px, 257px) minmax(1px, 257px) minmax(1px, 299px) minmax(1px, 257px);
+        column-gap: 15px;
+        padding: 0 10px;
     }
     
     &__cards-item {
-        width: 257px;
         height: 457px;   
         background-color: rgba(255, 255, 255, 0.11);
+        width: 100%;
+        max-width: 257px;
     }
 
     &__cards-part1 {
-        display: flex;
+        display: none;
     }
 
     &__cards-part2 {
-        display: flex;
-        align-items: center;
-    }
-
-    &__cards-item:first-child {
-        margin-right: 15px;
-        
+        display: none;
     }
     
     &__cards-itembig {
-        width: 299px;
         height: 560px;    
-        margin: 0 15px;
     }
     
     &__cards-title {
@@ -118,8 +116,7 @@
         color: $color-basic;
         text-transform: uppercase;
     }
-    
-    }
+}
     
     .line {
         border-bottom: 5px solid $color-nav-hover;
@@ -152,208 +149,51 @@
         padding-bottom: 62px !important;
     }
 
-
-
-// .section{
-
-//     &__subscription1 {
-//         background-image: url(../img/subscription/pricing.png);
-//     }
-
-//     &__subscription {
-//     width: 100%;
-//     max-width: 1200px;
-//     margin: 0 auto;
-//     @include flex(flex-start, center, column);
-//     padding: 112px 0 73px;
-//     text-align: center;
-//     }
-
-//     &__subscription-title {
-//         @include font-family-montserrat-700;
-//         font-size: $font-size-3xl;
-//         line-height: $line-height-6xl;
-//         color: $color-basic;
-//         text-transform: uppercase;
-//         padding-bottom: 61px;
-//     }
-
-//     &__cards {
-//         display: flex;
-//         align-items: center;
-//     }
-    
-//     &__cards-item {
-//         width: 257px;
-//         height: 457px;   
-//         background-color: rgba(255, 255, 255, 0.11);
-//     }
-
-//     &__cards-part1 {
-//         display: flex;
-//     }
-
-//     &__cards-part2 {
-//         display: flex;
-//         align-items: center;
-//     }
-
-//     &__cards-item:first-child {
-//         margin-right: 15px;
-        
-//     }
-    
-//     &__cards-itembig {
-//         width: 299px;
-//         height: 560px;    
-//         margin: 0 15px;
-//     }
-    
-//     &__cards-title {
-//         @include font-family-montserrat-400;
-//         font-size: $font-size-xs;
-//         line-height: $line-height-s;
-//         color: $color-basic;
-//         text-transform: uppercase;
-//         padding: 36px;
-//         text-align: center;
-//         background-color: rgba(255, 255, 255, 0.06) !important;
-//     }
-    
-//     &__cards-price {
-//         @include font-family-montserrat-400;
-//         font-size: $font-size-5xl;
-//         line-height: $line-height-11xl;
-//         color: $color-basic;
-//         text-transform: uppercase;
-//         padding-top: 30px;
-//     }
-    
-//     &__cards-pricebig {
-//         @include font-family-montserrat-400;
-//         font-size: $font-size-7xl;
-//         line-height: $line-height-11xl;
-//         color: $color-basic;
-//         text-transform: uppercase;
-//         padding-top: 14px;
-//         padding-bottom: 16px;
-//     }
-
-//     &__cards-period {
-//         @include font-family-montserrat-400;
-//         font-size: $font-size-6xs;
-//         line-height: $line-height-7xs;
-//         color: $color-basic;
-//         text-transform: uppercase;
-//     }
-
-//     &__line {
-//         display: flex;
-//         justify-content: center
-//     }
-    
-//     &__cards-description {
-//         @include font-family-montserrat-400;
-//         font-size: $font-size-4xs;
-//         line-height: $line-height-5xs;
-//         color: $color-basic;
-//         padding-top: 36px;
-//         padding-bottom: 37px;
-//     }
-    
-//     &__cards-button {
-//         width: 163px;
-//         height: 45px; 
-//         border-radius: 20px;
-//         border: none;
-//         background-color: rgba(255, 255, 255, 0.15);
-//         @include font-family-montserrat-400;
-//         font-size: $font-size-5xs;
-//         line-height: $line-height-8xs;
-//         color: $color-basic;
-//         text-transform: uppercase;
-//     }
-    
-//     }
-    
-//     .line {
-//         border-bottom: 5px solid $color-nav-hover;
-//         width: 60px;
-//         padding-top: 38px;
-//         text-align: center;
-//     } 
-
-//     .linebig {
-//         padding-top: 46px;
-//         margin-bottom: 10px;
-//     }
-
-//     .titlebig {
-//         background-color: rgba(0, 0, 0, 0.11);
-//         padding: 44px 96px;
-//     }
-    
-//     .pricebig {
-//         background-color: rgba(70, 48, 72, 0.84);
-//         padding-bottom: 3px;
-//     }
-
-//     .btnbig {
-//         margin-bottom: 47px;
-//         margin-top: 46px;
-//     }
-
-//     .descards1 {
-//         padding-bottom: 62px !important;
-//     }
-
     @media (min-width: 481px) and (max-width: 992px) {
 
         .section {
 
-            &__subscription {
+            &__subscription1 {
                 background-image: url(../img/subscription/pricing2.png);
+                background-size: 100%;
+            }
+
+            &__subscription {
                 padding-top: 88px;
                 padding-bottom: 94px;
                 overflow: hidden;
             }
 
             &__cards {
-                flex-direction: column;
-            }    
+                grid-template-columns: repeat(2, minmax(1px, 299px));
+                column-gap: 25px;
+                row-gap: 30px;
 
+                &-item {
+                    &:first-of-type {
+                        justify-self:end;
+                    }
+                }
+            }   
+            
             &__subscription-title {
                 @include font-family-montserrat-700;
-                font-size: $font-size-2xl;
-                line-height: $line-height-4xl;
+                font-size: $font-size-2xl;                line-height: $line-height-4xl;
                 padding-bottom: 39px;
             }
-
-            &__cards-item:first-child {
-                margin-right: 25px;    
-            }
-
-            &__cards-part1 {
-                margin-bottom: 30px;
-            }
-
-            &__cards-part2 {
-                margin-left: -53px; 
-                
-            }
-
-            &__cards-itembig {
-                margin-right: 25px;
-            }
         }
-    }
-
+    }       
+    
     @media (max-width: 480px) {
 
         .section {
 
-            &__subscription {
+            &__subscription1 {
                 background-image: url(../img/subscription/pricing3.png);
+                background-size: 100%;
+            }
+
+            &__subscription {
                 padding-top: 14px;
                 padding-bottom: 12px;
                 overflow: hidden;
@@ -368,20 +208,12 @@
             }
 
             &__cards {
+            display: flex;
             flex-direction: column;
+            column-gap: 0;
             }
 
-            &__cards-part1 {
-                flex-direction: column;
-                margin-bottom: 18px;
-            }
-
-            &__cards-part2 {
-                flex-direction: column;
-            }
-
-            &__cards-item:first-child {
-                margin-right: 0px;
+            &__cards-item:not(:last-child) {
                 margin-bottom: 18px;
             }
 
@@ -397,7 +229,11 @@
 
             &__cards-itembig{
                 margin-bottom: 18px;
+                width: 299px;
             }
+
+            &__cards-description {
+                line-height: $line-height-xs;
 
         }
         
@@ -405,5 +241,4 @@
             padding-bottom: 0px;
         }
     }
-
-    
+}
